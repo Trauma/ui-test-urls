@@ -3,7 +3,7 @@
 This tools enables you to detect visual regressions in your website.
 You define a list of urls in **test-config.json**.
 
-For the first time, you can defined your production website as the reference.
+For the first time, you can defined your pre-production website as the reference.
 
 Once you made some change in your source code, you run the UI test to see the changes.
 
