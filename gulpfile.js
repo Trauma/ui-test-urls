@@ -14,6 +14,6 @@ gulp.task('backstop_test', function () {
   return backstopjs('test',backstopConfig).then(() => {
     gutil.log(color("SUCCESS no regressions", 'GREEN'));
   }).catch(function (error) {
-  	gutil.log(color("ERROR : Visual regressions found", 'RED'));
+  	throw color("Visual regressions found",'RED');
   });
 });
