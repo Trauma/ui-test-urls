@@ -12,7 +12,9 @@ If UI modifications detected by the tool are OK, you can set up a new UI referen
 
 #Installation
 
+``
 npm install
+``
 
 #Set up a reference
 
