@@ -25,3 +25,7 @@ gulp backstop_reference
 ``
 gulp backstop_test
 ``
+
+#Maven integration
+
+After you have defined a reference with **gulp backstop_reference**, you can integrate in your **pom.xml** file, the plugin **exec-maven-plugin** as it is described in the pom.xml here.
