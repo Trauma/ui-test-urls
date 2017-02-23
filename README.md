@@ -1,4 +1,4 @@
-#Description
+# Description
 
 This tools enables you to detect visual regressions in your website.
 You define a list of urls in **test-config.json**.
@@ -10,22 +10,28 @@ Once you made some change in your source code, you run the UI test to see the ch
 If UI modifications detected by the tool are OK, you can set up a new UI reference.
 
 
-#Installation
+# Installation
 
 ``
 npm install
 ``
 
-#Set up a reference
+# Set up a reference
 
 ``
 gulp backstop_reference
 ``
 
-#Run UI test
+# Run UI test
 
 ``
 gulp backstop_test
+``
+
+# Open Report
+
+``
+gulp openReport
 ``
 
 #Maven integration
