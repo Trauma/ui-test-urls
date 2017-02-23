@@ -17,3 +17,5 @@ gulp.task('backstop_test', function () {
   	throw color("Visual regressions found",'RED');
   });
 });
+
+gulp.task('openReport', () => backstopjs('openReport',backstopConfig));
