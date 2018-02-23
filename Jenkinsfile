@@ -26,9 +26,8 @@ pipeline {
         }
         stage('Validation') {
             steps {
-              env.approve = input message: "Test de non regression ok ?"
-              ok: 'approve'
-              sh 'npm ${approve}'
+              input message: "Test de non regression ok ?"
+              sh 'npm approve'
             }
         }
     }
