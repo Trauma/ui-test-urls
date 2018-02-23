@@ -67,7 +67,7 @@ module.exports = {
     "ci_report": "backstop_data/ci_report"
   },
   "casperFlags": [],
-  "engine": "slimerjs",
+  "engine": "chrome",
   "report": ["browser", "CI"],
   "engineFlags": [],
   "asyncCaptureLimit": 5,

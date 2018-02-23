@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('Install') {
             steps {
+                git 'https://github.com/Trauma/ui-test-urls.git'
                 sh 'npm install'
             }
         }
