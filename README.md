@@ -31,11 +31,13 @@ Define the target urls you want to test in the ``urls.json`` file.
 
 Then run ``npm run test`` in your terminal. Once the tests are passed your browser should popup. Review the screenshots, if everthing is ok then you must set them as references.
 
-If not you can tune backstopJS settings in the `backstop-config.js` file look at the `scenariosArray` block. Please also refere to backstopJS documentation. In these setup backstopJS config object is define as a node module inside a .js file in order to iterate through all the target urls.
+If not, you can tune backstopJS settings in the `backstop-config.js` file. Look at the `scenariosArray` block and refere to backstopJS documentation.
+
+In these setup backstopJS config object is define as a node module inside a .js file in order to iterate through all the target urls.
 
 # Set the references
 
-In order to approve the previous test run, an therefor make it the new reference, run ``npm run approve`` in your terminal. The reference hence is name will be the comparision reference for the next tests.
+In order to approve the previous test run, an therefore make it the new reference, run ``npm run approve`` in your terminal. The reference, hence is name will be the comparisions reference for the next tests.
 
 # Jenkins integration
 
