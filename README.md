@@ -1,39 +1,42 @@
 # Description
 
-This tools enables you to detect visual regressions in your website.
-You define a list of urls in **test-config.json**.
+[Forked from Alexandre-Gadiou/ui-test-urls
+](https://github.com/Alexandre-Gadiou/ui-test-urls)
 
-For the first time, you can defined your pre-production website as the reference.
+This tools, based on, [BackstopJS][62712fdc], enables you to detect visual regressions based on screenshots comparisions.
 
-Once you made some change in your source code, you run the UI test to see the changes.
+  [62712fdc]: https://github.com/garris/BackstopJS "BackstopJS"
 
-If UI modifications detected by the tool are OK, you can set up a new UI reference.
+Pre-requisites: the [chrome][c49f6796] browser must be installed
 
+  [c49f6796]: https://www.google.com/intl/fr-FR/chrome/ "chrome"
 
 # Installation
+
+First install nodeJS :
+
+``
+curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
+``
+
+Then run :
 
 ``
 npm install
 ``
 
-# Set up a reference
+# Testings
 
-``
-gulp backstop_reference
-``
+Define the target urls you want to test in the ``urls.json`` file.
 
-# Run UI test
+Then run ``npm run test`` in your terminal. Once the tests are passed your browser should popup. Review the screenshots, if everthing is ok then you must set them as references.
 
-``
-gulp backstop_test
-``
+If not you can tune backstopJS settings in the `backstop-config.js` file look at the `scenariosArray` block. Please also refere to backstopJS documentation. In these setup backstopJS config object is define as a node module inside a .js file in order to iterate through all the target urls.
 
-# Open Report
+# Set the references
 
-``
-gulp openReport
-``
+In order to approve the previous test run, an therefor make it the new reference, run ``npm run approve`` in your terminal. The reference hence is name will be the comparision reference for the next tests.
 
-#Maven integration
+# Jenkins integration
 
-After you have defined a reference with **gulp backstop_reference**, you can integrate in your **pom.xml** file, the plugin **exec-maven-plugin** as it is described in the pom.xml here.
+Use the Jenkinsfile provided in a pipe-line job. The jenkins agent must have nodeJS and chrome installed.

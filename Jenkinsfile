@@ -9,7 +9,8 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'npm test'
+                sh 'npm run test'
+                sh 'touch backstop_data/ci_report/xunit.xml'
                 junit 'backstop_data/ci_report/xunit.xml'
             }
         }
@@ -28,7 +29,7 @@ pipeline {
         stage('Validation') {
             steps {
               input message: "Test de non regression ok ?"
-              sh 'npm approve'
+              sh 'npm run approve'
             }
         }
     }
