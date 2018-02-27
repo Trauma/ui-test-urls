@@ -3,23 +3,23 @@
 [Forked from Alexandre-Gadiou/ui-test-urls
 ](https://github.com/Alexandre-Gadiou/ui-test-urls)
 
-This tools, based on, [BackstopJS][62712fdc], enables you to detect visual regressions based on screenshots comparisions.
+This tool, based on [BackstopJS][62712fdc], enables you to detect visual regressions with screenshots comparision.
 
   [62712fdc]: https://github.com/garris/BackstopJS "BackstopJS"
 
-Pre-requisites: the [chrome][c49f6796] browser must be installed
+# Installation
+
+Pre-requisites: [Chrome][c49f6796] browser must be installed
 
   [c49f6796]: https://www.google.com/intl/fr-FR/chrome/ "chrome"
 
-# Installation
-
-First install nodeJS :
+If not already, install nodeJS :
 
 ``
 curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
 ``
 
-Then run :
+Then clone this repository, `cd` into it and run :
 
 ``
 npm install
@@ -39,4 +39,4 @@ In order to approve the previous test run, an therefor make it the new reference
 
 # Jenkins integration
 
-Use the Jenkinsfile provided in a pipe-line job. The jenkins agent must have nodeJS and chrome installed.
+Use the Jenkinsfile provided in a pipe-line job. The jenkins build agent must have nodeJS and chrome installed.
